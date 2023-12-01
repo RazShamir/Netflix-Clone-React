@@ -1,0 +1,27 @@
+.title-list {
+    display: flex;
+    max-width: 100%;
+    gap: 4rem;
+    padding-block: 16px;
+    align-items: center;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.title-list-container {
+    margin: 32px;
+    color:white;
+}
+.title-list > div {
+    flex-grow:1;
+}
+/* Chrome, Safari, Opera */
+.title-list::-webkit-scrollbar {
+    display: none;
+}
+  
+.title-list-image {
+    height: 150px;
+    object-fit: contain;
+}

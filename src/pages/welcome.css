@@ -1,0 +1,13 @@
+.welcome {
+    height:100%;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
+.welcome > a {
+    color:white;
+    text-decoration: none;
+    padding:12px;
+    background:#cb2d3e;
+    border: 1px solid white;
+}

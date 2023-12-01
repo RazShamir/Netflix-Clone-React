@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import { FormEvent, useEffect, useState } from 'react';
 import './App.css';
+import {MoviesAPI} from './service'
+import { Result } from './types';
+import TitleList from './components/TitleList';
+import { useTitleSearch } from './context/SearchContext';
+import Navbar from './components/Navbar';
+import { Route, Routes } from 'react-router';
+import Welcome from './pages/Welcome';
+import Home from './pages/Home';
+
+
+
 
 function App() {
+
+  const { results } = useTitleSearch()
+
+ 
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Routes>
+        <Route index element={<Welcome/>}/>
+        <Route path='/home' element={<Home/>}/>
+      </Routes>
     </div>
   );
 }
